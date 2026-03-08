@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Appendix 3: ロゴの構成 - Chainlit 技術書 補足資料</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    /* 完成ロゴ: 重ね合わせ */
+    .logo-composite {
+      position: relative;
+      width: 400px;
+      height: 400px;
+      margin: 0 auto;
+      background: #080C16;
+      border-radius: 8px;
+    }
+    .logo-composite img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* レイヤー分解: グリッド */
+    .layers-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    @media (max-width: 600px) {
+      .layers-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    .layer-item {
+      text-align: center;
+      border: 1px solid #222;
+      border-radius: 6px;
+      padding: 0.75rem 0.5rem;
+      background: #080C16;
+    }
+    .layer-item img {
+      width: 100%;
+      aspect-ratio: 1;
+    }
+    .layer-item .layer-label {
+      font-size: 0.8rem;
+      color: #aaa;
+      margin-top: 0.3rem;
+    }
+    .layer-item .layer-color {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      vertical-align: middle;
+      margin-right: 4px;
+      border: 1px solid #ccc;
+    }
+
+    /* 累積重ね合わせ */
+    .layers-cumulative {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    @media (max-width: 600px) {
+      .layers-cumulative {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    .cumulative-item {
+      text-align: center;
+      border: 1px solid #222;
+      border-radius: 6px;
+      padding: 0.75rem 0.5rem;
+      background: #080C16;
+    }
+    .cumulative-item .cumulative-stack {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1;
+    }
+    .cumulative-item .cumulative-stack img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .cumulative-item .layer-label {
+      font-size: 0.8rem;
+      color: #aaa;
+      margin-top: 0.3rem;
+    }
+  </style>
+</head>
+<body>
+  <nav><a href="../index.html">← 目次に戻る</a></nav>
+
+  <h1>Appendix 3: ロゴの構成</h1>
+  <p>ロゴは8枚の透過SVGレイヤーを重ね合わせて構成されています。各レイヤーは同心円状のリングで、異なる半径・色・セグメントパターンを持ちます。</p>
+
+  <h2>完成図</h2>
+  <p>全8レイヤーを重ね合わせた状態です（ring-01が最背面、ring-08が最前面）。</p>
+  <figure>
+    <div class="logo-composite">
+      <img src="../assets/images/logos/ring-01.svg" alt="ring-01">
+      <img src="../assets/images/logos/ring-02.svg" alt="ring-02">
+      <img src="../assets/images/logos/ring-03.svg" alt="ring-03">
+      <img src="../assets/images/logos/ring-04.svg" alt="ring-04">
+      <img src="../assets/images/logos/ring-05.svg" alt="ring-05">
+      <img src="../assets/images/logos/ring-06.svg" alt="ring-06">
+      <img src="../assets/images/logos/ring-07.svg" alt="ring-07">
+      <img src="../assets/images/logos/ring-08.svg" alt="ring-08">
+    </div>
+    <figcaption>図3.1: ロゴ完成図（全レイヤー重ね合わせ）</figcaption>
+  </figure>
+
+  <h2>各レイヤーの分解</h2>
+  <p>8枚のリングを個別に表示したものです。</p>
+  <div class="layers-grid">
+    <div class="layer-item">
+      <img src="../assets/images/logos/ring-01.svg" alt="ring-01">
+      <div class="layer-label"><span class="layer-color" style="background:#4C6B85;"></span>1: 最背面</div>
+    </div>
+    <div class="layer-item">
+      <img src="../assets/images/logos/ring-02.svg" alt="ring-02">
+      <div class="layer-label"><span class="layer-color" style="background:#00D4FF;"></span>2</div>
+    </div>
+    <div class="layer-item">
+      <img src="../assets/images/logos/ring-03.svg" alt="ring-03">
+      <div class="layer-label"><span class="layer-color" style="background:#4C6B85;"></span>3</div>
+    </div>
+    <div class="layer-item">
+      <img src="../assets/images/logos/ring-04.svg" alt="ring-04">
+      <div class="layer-label"><span class="layer-color" style="background:#E64A12;"></span>4</div>
+    </div>
+    <div class="layer-item">
+      <img src="../assets/images/logos/ring-05.svg" alt="ring-05">
+      <div class="layer-label"><span class="layer-color" style="background:#1D9FD6;"></span>5</div>
+    </div>
+    <div class="layer-item">
+      <img src="../assets/images/logos/ring-06.svg" alt="ring-06">
+      <div class="layer-label"><span class="layer-color" style="background:#1D9FD6;"></span>6</div>
+    </div>
+    <div class="layer-item">
+      <img src="../assets/images/logos/ring-07.svg" alt="ring-07">
+      <div class="layer-label"><span class="layer-color" style="background:#1D9FD6;"></span>7</div>
+    </div>
+    <div class="layer-item">
+      <img src="../assets/images/logos/ring-08.svg" alt="ring-08">
+      <div class="layer-label"><span class="layer-color" style="background:#E64A12;"></span>8: 最前面</div>
+    </div>
+  </div>
+
+  <h2>累積重ね合わせ</h2>
+  <p>レイヤーを1枚ずつ追加していく過程です。</p>
+  <div class="layers-cumulative">
+    <div class="cumulative-item">
+      <div class="cumulative-stack">
+        <img src="../assets/images/logos/ring-01.svg" alt="1枚目まで">
+      </div>
+      <div class="layer-label">1枚目まで</div>
+    </div>
+    <div class="cumulative-item">
+      <div class="cumulative-stack">
+        <img src="../assets/images/logos/ring-01.svg" alt="">
+        <img src="../assets/images/logos/ring-02.svg" alt="2枚目まで">
+      </div>
+      <div class="layer-label">2枚目まで</div>
+    </div>
+    <div class="cumulative-item">
+      <div class="cumulative-stack">
+        <img src="../assets/images/logos/ring-01.svg" alt="">
+        <img src="../assets/images/logos/ring-02.svg" alt="">
+        <img src="../assets/images/logos/ring-03.svg" alt="3枚目まで">
+      </div>
+      <div class="layer-label">3枚目まで</div>
+    </div>
+    <div class="cumulative-item">
+      <div class="cumulative-stack">
+        <img src="../assets/images/logos/ring-01.svg" alt="">
+        <img src="../assets/images/logos/ring-02.svg" alt="">
+        <img src="../assets/images/logos/ring-03.svg" alt="">
+        <img src="../assets/images/logos/ring-04.svg" alt="4枚目まで">
+      </div>
+      <div class="layer-label">4枚目まで</div>
+    </div>
+    <div class="cumulative-item">
+      <div class="cumulative-stack">
+        <img src="../assets/images/logos/ring-01.svg" alt="">
+        <img src="../assets/images/logos/ring-02.svg" alt="">
+        <img src="../assets/images/logos/ring-03.svg" alt="">
+        <img src="../assets/images/logos/ring-04.svg" alt="">
+        <img src="../assets/images/logos/ring-05.svg" alt="5枚目まで">
+      </div>
+      <div class="layer-label">5枚目まで</div>
+    </div>
+    <div class="cumulative-item">
+      <div class="cumulative-stack">
+        <img src="../assets/images/logos/ring-01.svg" alt="">
+        <img src="../assets/images/logos/ring-02.svg" alt="">
+        <img src="../assets/images/logos/ring-03.svg" alt="">
+        <img src="../assets/images/logos/ring-04.svg" alt="">
+        <img src="../assets/images/logos/ring-05.svg" alt="">
+        <img src="../assets/images/logos/ring-06.svg" alt="6枚目まで">
+      </div>
+      <div class="layer-label">6枚目まで</div>
+    </div>
+    <div class="cumulative-item">
+      <div class="cumulative-stack">
+        <img src="../assets/images/logos/ring-01.svg" alt="">
+        <img src="../assets/images/logos/ring-02.svg" alt="">
+        <img src="../assets/images/logos/ring-03.svg" alt="">
+        <img src="../assets/images/logos/ring-04.svg" alt="">
+        <img src="../assets/images/logos/ring-05.svg" alt="">
+        <img src="../assets/images/logos/ring-06.svg" alt="">
+        <img src="../assets/images/logos/ring-07.svg" alt="7枚目まで">
+      </div>
+      <div class="layer-label">7枚目まで</div>
+    </div>
+    <div class="cumulative-item">
+      <div class="cumulative-stack">
+        <img src="../assets/images/logos/ring-01.svg" alt="">
+        <img src="../assets/images/logos/ring-02.svg" alt="">
+        <img src="../assets/images/logos/ring-03.svg" alt="">
+        <img src="../assets/images/logos/ring-04.svg" alt="">
+        <img src="../assets/images/logos/ring-05.svg" alt="">
+        <img src="../assets/images/logos/ring-06.svg" alt="">
+        <img src="../assets/images/logos/ring-07.svg" alt="">
+        <img src="../assets/images/logos/ring-08.svg" alt="完成">
+      </div>
+      <div class="layer-label">完成（全8枚）</div>
+    </div>
+  </div>
+
+  <footer>
+    <p><a href="../index.html">← 目次に戻る</a></p>
+  </footer>
+</body>
+</html>
