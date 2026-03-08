@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;700&display=swap');
+
+body {
+  font-family: "M PLUS 1p", sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+  line-height: 1.8;
+  color: #333;
+  background: #fff;
+}
+
+h1 {
+  font-size: 1.5rem;
+  border-bottom: 2px solid #333;
+  padding-bottom: 0.3rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+
+nav {
+  margin-bottom: 1.5rem;
+}
+
+nav a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+a {
+  color: #0366d6;
+}
+
+figure {
+  margin: 1.5rem 0;
+  padding: 0;
+}
+
+video {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+figcaption {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+footer {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ddd;
+  font-size: 0.85rem;
+  color: #999;
+}
