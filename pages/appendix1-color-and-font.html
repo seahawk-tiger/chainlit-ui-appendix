@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Appendix 1: カラー＆フォント - Chainlit Techbook 補足資料</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap">
+  <style>
+    /* ダークテーマ CSS変数定義 */
+    .dark-preview {
+      --background: 222 47% 6%;
+      --foreground: 222 40% 96%;
+      --card: 222 47% 9%;
+      --card-foreground: 210 40% 96%;
+      --popover: 222 47% 9%;
+      --popover-foreground: 210 40% 96%;
+      --muted: 222 30% 14%;
+      --muted-foreground: 215 20% 65%;
+      --primary: 195 100% 50%;
+      --primary-foreground: 222 47% 6%;
+      --secondary: 215 28% 17%;
+      --secondary-foreground: 210 40% 96%;
+      --accent: 195 100% 45%;
+      --accent-foreground: 222 47% 6%;
+      --border: 195 55% 34%;
+      --input: 215 28% 18%;
+      --ring: 195 100% 50%;
+      --destructive: 0 72% 51%;
+      --destructive-foreground: 210 40% 96%;
+      --error-bg: 32 76% 13%;
+      --error-border: 36 100% 56%;
+      --error-foreground: 36 100% 90%;
+      --radius: 0.75rem;
+    }
+
+    /* 一覧表スタイル */
+    .color-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      margin: 1rem 0 2rem;
+    }
+    .color-table th,
+    .color-table td {
+      border: 1px solid #ddd;
+      padding: 0.5rem 0.75rem;
+      text-align: left;
+    }
+    .color-table th {
+      background: #f5f5f5;
+      font-weight: 700;
+    }
+    .color-table .category-row td {
+      background: #eee;
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.03em;
+    }
+    .swatch {
+      display: inline-block;
+      width: 2rem;
+      height: 1.2rem;
+      border: 1px solid #999;
+      border-radius: 3px;
+      vertical-align: middle;
+    }
+    .color-table code {
+      font-size: 0.85rem;
+      background: #f0f0f0;
+      padding: 0.1rem 0.3rem;
+      border-radius: 3px;
+    }
+
+    /* フォントサンプルセクション */
+    .font-sample-section {
+      margin: 1rem 0 2rem;
+    }
+    .font-sample {
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 1.2rem;
+      margin-bottom: 1rem;
+    }
+    .font-sample .font-name {
+      font-size: 0.8rem;
+      color: #888;
+      margin-bottom: 0.5rem;
+    }
+    .font-sample .sample-heading {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+    }
+    .font-sample .sample-body {
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+    .font-orbitron {
+      font-family: "Orbitron", sans-serif;
+    }
+    .font-mplus {
+      font-family: "M PLUS 1p", sans-serif;
+    }
+
+    /* ダークプレビューセクション */
+    .dark-preview {
+      background: hsl(222 47% 6%);
+      color: hsl(222 40% 96%);
+      border-radius: 8px;
+      padding: 2rem;
+      margin: 1rem 0 2rem;
+    }
+    .dark-preview h3 {
+      color: hsl(222 40% 96%);
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+    .sample-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.2rem;
+    }
+    .sample-box {
+      padding: 1.2rem;
+      border-radius: var(--radius);
+      border: 2px solid transparent;
+    }
+    .sample-box .label {
+      font-size: 0.75rem;
+      opacity: 0.7;
+      margin-bottom: 0.3rem;
+    }
+    .sample-box .title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+    }
+    .sample-box .desc {
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+    .sample-btn {
+      display: inline-block;
+      padding: 0.6rem 1.5rem;
+      border-radius: var(--radius);
+      font-weight: 700;
+      font-size: 0.9rem;
+      border: none;
+      cursor: pointer;
+      margin: 0.3rem 0.5rem 0.3rem 0;
+    }
+    .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+    .btn-label {
+      font-size: 0.75rem;
+      opacity: 0.7;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <nav><a href="../index.html">&larr; 目次に戻る</a></nav>
+
+  <h1>Appendix 1: Chainlit ダークテーマ カラー＆フォント</h1>
+  <p>記事で利用したカラーとフォント、ボックスサンプルです。</p>
+
+  <!-- ============================================ -->
+  <!-- フォントサンプル                              -->
+  <!-- ============================================ -->
+  <h2>フォントサンプル</h2>
+
+  <div class="font-sample-section">
+    <div class="font-sample">
+      <div class="font-name">見出し用: Orbitron（英字）</div>
+      <div class="sample-heading font-orbitron">Chainlit AI Assistant</div>
+      <div class="sample-heading font-orbitron" style="font-size:1.1rem;">The quick brown fox jumps over the lazy dog</div>
+    </div>
+
+    <div class="font-sample">
+      <div class="font-name">見出し用: M PLUS 1p（日本語）</div>
+      <div class="sample-heading font-mplus">生成AIチャットボット</div>
+      <div class="sample-heading font-mplus" style="font-size:1.1rem;">チャットボットデザイン</div>
+    </div>
+
+    <div class="font-sample">
+      <div class="font-name">本文用: M PLUS 1p（英字・日本語共通）</div>
+      <div class="sample-body font-mplus">
+        The quick brown fox jumps over the lazy dog. 0123456789<br>
+        あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- カラー変数一覧表                              -->
+  <!-- ============================================ -->
+  <h2>カラー変数一覧</h2>
+  <table class="color-table">
+    <thead>
+      <tr>
+        <th>変数名</th>
+        <th>カラーコード</th>
+        <th>色見本</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- 基本色 -->
+      <tr class="category-row"><td colspan="3">基本色</td></tr>
+      <tr>
+        <td><code>--background</code></td>
+        <td><code>#080C16</code></td>
+        <td><span class="swatch" style="background:#080C16"></span></td>
+      </tr>
+      <tr>
+        <td><code>--foreground</code></td>
+        <td><code>#F1F3F9</code></td>
+        <td><span class="swatch" style="background:#F1F3F9"></span></td>
+      </tr>
+
+      <!-- カード / ポップオーバー -->
+      <tr class="category-row"><td colspan="3">カード / ポップオーバー</td></tr>
+      <tr>
+        <td><code>--card</code></td>
+        <td><code>#0C1322</code></td>
+        <td><span class="swatch" style="background:#0C1322"></span></td>
+      </tr>
+      <tr>
+        <td><code>--card-foreground</code></td>
+        <td><code>#F1F5F9</code></td>
+        <td><span class="swatch" style="background:#F1F5F9"></span></td>
+      </tr>
+      <tr>
+        <td><code>--popover</code></td>
+        <td><code>#0C1322</code></td>
+        <td><span class="swatch" style="background:#0C1322"></span></td>
+      </tr>
+      <tr>
+        <td><code>--popover-foreground</code></td>
+        <td><code>#F1F5F9</code></td>
+        <td><span class="swatch" style="background:#F1F5F9"></span></td>
+      </tr>
+
+      <!-- 控えめ / ミュート -->
+      <tr class="category-row"><td colspan="3">控えめ / ミュート</td></tr>
+      <tr>
+        <td><code>--muted</code></td>
+        <td><code>#191F2E</code></td>
+        <td><span class="swatch" style="background:#191F2E"></span></td>
+      </tr>
+      <tr>
+        <td><code>--muted-foreground</code></td>
+        <td><code>#94A3B8</code></td>
+        <td><span class="swatch" style="background:#94A3B8"></span></td>
+      </tr>
+
+      <!-- プライマリ / セカンダリ -->
+      <tr class="category-row"><td colspan="3">プライマリ / セカンダリ</td></tr>
+      <tr>
+        <td><code>--primary</code></td>
+        <td><code>#00BFFF</code></td>
+        <td><span class="swatch" style="background:#00BFFF"></span></td>
+      </tr>
+      <tr>
+        <td><code>--primary-foreground</code></td>
+        <td><code>#080C16</code></td>
+        <td><span class="swatch" style="background:#080C16"></span></td>
+      </tr>
+      <tr>
+        <td><code>--secondary</code></td>
+        <td><code>#1F2937</code></td>
+        <td><span class="swatch" style="background:#1F2937"></span></td>
+      </tr>
+      <tr>
+        <td><code>--secondary-foreground</code></td>
+        <td><code>#F1F5F9</code></td>
+        <td><span class="swatch" style="background:#F1F5F9"></span></td>
+      </tr>
+
+      <!-- アクセント -->
+      <tr class="category-row"><td colspan="3">アクセント</td></tr>
+      <tr>
+        <td><code>--accent</code></td>
+        <td><code>#00ACE6</code></td>
+        <td><span class="swatch" style="background:#00ACE6"></span></td>
+      </tr>
+      <tr>
+        <td><code>--accent-foreground</code></td>
+        <td><code>#080C16</code></td>
+        <td><span class="swatch" style="background:#080C16"></span></td>
+      </tr>
+
+      <!-- ボーダー / インプット / リング -->
+      <tr class="category-row"><td colspan="3">ボーダー / インプット / リング</td></tr>
+      <tr>
+        <td><code>--border</code></td>
+        <td><code>#276F86</code></td>
+        <td><span class="swatch" style="background:#276F86"></span></td>
+      </tr>
+      <tr>
+        <td><code>--input</code></td>
+        <td><code>#212C3B</code></td>
+        <td><span class="swatch" style="background:#212C3B"></span></td>
+      </tr>
+      <tr>
+        <td><code>--ring</code></td>
+        <td><code>#00BFFF</code></td>
+        <td><span class="swatch" style="background:#00BFFF"></span></td>
+      </tr>
+
+      <!-- エラー / 破壊的 -->
+      <tr class="category-row"><td colspan="3">エラー / 破壊的</td></tr>
+      <tr>
+        <td><code>--destructive</code></td>
+        <td><code>#DC2828</code></td>
+        <td><span class="swatch" style="background:#DC2828"></span></td>
+      </tr>
+      <tr>
+        <td><code>--destructive-foreground</code></td>
+        <td><code>#F1F5F9</code></td>
+        <td><span class="swatch" style="background:#F1F5F9"></span></td>
+      </tr>
+      <tr>
+        <td><code>--error-bg</code></td>
+        <td><code>#3A2308</code></td>
+        <td><span class="swatch" style="background:#3A2308"></span></td>
+      </tr>
+      <tr>
+        <td><code>--error-border</code></td>
+        <td><code>#FFA51F</code></td>
+        <td><span class="swatch" style="background:#FFA51F"></span></td>
+      </tr>
+      <tr>
+        <td><code>--error-foreground</code></td>
+        <td><code>#FFEBCC</code></td>
+        <td><span class="swatch" style="background:#FFEBCC"></span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- ============================================ -->
+  <!-- ボックスサンプル                              -->
+  <!-- ============================================ -->
+  <h2>ボックスサンプル</h2>
+  <p>以下はダークテーマの背景上で各配色を適用したサンプルです。</p>
+
+  <section class="dark-preview">
+    <div class="sample-grid">
+
+      <!-- 基本ボックス（英字見出し） -->
+      <div class="sample-box" style="background:hsl(var(--background)); color:hsl(var(--foreground)); border-color:hsl(var(--primary)); border-style:solid;">
+        <div class="label">background + foreground + primary border</div>
+        <div class="title font-orbitron">Basic Box</div>
+        <div class="desc font-mplus">The standard layout with primary-colored border applied to the base background and foreground.</div>
+      </div>
+
+      <!-- 基本ボックス（日本語見出し） -->
+      <div class="sample-box" style="background:hsl(var(--background)); color:hsl(var(--foreground)); border-color:hsl(var(--primary)); border-style:solid;">
+        <div class="label">background + foreground + primary border</div>
+        <div class="title font-mplus">基本ボックス</div>
+        <div class="desc font-mplus">標準の背景色・文字色にプライマリカラーのボーダーを適用したベースとなるスタイルです。</div>
+      </div>
+
+      <!-- インプットボックス（英字見出し） -->
+      <div class="sample-box" style="background:hsl(var(--input)); color:hsl(var(--foreground)); border:2px solid hsl(var(--ring));">
+        <div class="label">input + foreground + ring (focus)</div>
+        <div class="title font-orbitron">Input Focus</div>
+        <div class="desc font-mplus">A text input field in focused state, highlighted with the ring color.</div>
+      </div>
+
+      <!-- インプットボックス（日本語見出し） -->
+      <div class="sample-box" style="background:hsl(var(--input)); color:hsl(var(--foreground)); border:2px solid hsl(var(--ring));">
+        <div class="label">input + foreground + ring (focus)</div>
+        <div class="title font-mplus">インプット（フォーカス時）</div>
+        <div class="desc font-mplus">テキスト入力欄のフォーカス状態を再現したスタイルです。</div>
+      </div>
+
+      <!-- エラーボックス（英字見出し） -->
+      <div class="sample-box" style="background:hsl(var(--error-bg)); color:hsl(var(--error-foreground)); border:2px solid hsl(var(--error-border));">
+        <div class="label">error-bg + error-foreground + error-border</div>
+        <div class="title font-orbitron">Error Alert</div>
+        <div class="desc font-mplus">Warm-toned color scheme for error messages and warning displays.</div>
+      </div>
+
+      <!-- エラーボックス（日本語見出し） -->
+      <div class="sample-box" style="background:hsl(var(--error-bg)); color:hsl(var(--error-foreground)); border:2px solid hsl(var(--error-border));">
+        <div class="label">error-bg + error-foreground + error-border</div>
+        <div class="title font-mplus">エラーボックス</div>
+        <div class="desc font-mplus">エラーメッセージや警告表示に使用される配色です。暖色系で注意を引きます。</div>
+      </div>
+
+    </div>
+
+    <!-- ボタン風サンプル -->
+    <div class="btn-row">
+      <div class="btn-label">ボタンサンプル</div>
+      <span class="sample-btn" style="background:hsl(var(--primary)); color:hsl(var(--primary-foreground));">Primary</span>
+    </div>
+  </section>
+
+  <footer>
+    <p><a href="../index.html">&larr; 目次に戻る</a></p>
+  </footer>
+</body>
+</html>
